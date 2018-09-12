@@ -1,14 +1,15 @@
 class Dog
   attr_accessor :name
   @@all = []
+  @@alldogs = []
   def initialize(name)
     @@all << self
-    @alldogs << name
+    @@alldogs << name
     @name = name
   end
   
   def self.all
-    @alldogs.each do |dog|
+    @@alldogs.each do |dog|
       puts "#{dog}"
     end
   end
